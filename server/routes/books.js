@@ -8,12 +8,12 @@ import { displayAddPage, displayBookList,
 const router = Router();
 
 /* GET books List page. READ */
-router.get('/books/list', displayBookList);
+router.get('/book-list', displayBookList);
 
 //  GET the Book Details page in order to add a new Book
-router.get('/books/add', displayAddPage);
+router.get('/book-add', displayAddPage);
 // POST process the Book Details page and create a new Book - CREATE
-router.post('/books/add', processAddPage);
+router.post('/book-add', processAddPage);
 
 // GET the Book Details page in order to edit an existing Book
 router.get('/books/edit/:id', displayEditPage);
