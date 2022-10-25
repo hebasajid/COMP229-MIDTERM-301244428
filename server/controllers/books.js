@@ -37,7 +37,7 @@ export function processAddPage(req, res, next) {
             res.end(err);
         };
 
-        res.redirect('/book-list')
+        res.redirect('/books/list')
     } )
 
    
@@ -80,7 +80,7 @@ export function processEditPage(req, res, next) {
             res.end(err);
         };
 
-        res.redirect('/book-list');
+        res.redirect('/books/list');
     } )
     
 }
@@ -95,7 +95,7 @@ export function processDelete(req, res, next) {
             res.end(err);
         }
 
-        res.redirect('/book-list');
+        res.redirect('/books/list');
     })
    
 }

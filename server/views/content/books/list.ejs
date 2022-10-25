@@ -26,6 +26,7 @@
 
                 <% for(let count=0; count < books.length; count++) { %>
                     <tr class="d-flex">
+                        
                         <td class="text-center col-2">
                             <%= books[count].name %>
                         </td>
@@ -43,7 +44,7 @@
                         </td>
                         <!-- ADD the EDIT BUTTON HERE -->
                         <td class="text-center col-1">
-                            <a href="/book-edit/<%= books[count]._id %>"
+                            <a href="/book-edit/<%= books[count]._id%>"
                                 class="btn btn-primary btn-sm">
                                 <i class="fas fa-pencil-alt"></i> Edit</a>
                         </td>
