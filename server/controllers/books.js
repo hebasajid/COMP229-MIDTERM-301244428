@@ -65,7 +65,7 @@ export function processEditPage(req, res, next) {
 
     let id = req.params.id;
     
-    let newBook = booksModel({
+    let newBook = ({
         _id: req.body.id,
         name: req.body.name,
         author: req.body.author,
