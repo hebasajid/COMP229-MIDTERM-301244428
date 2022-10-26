@@ -1,3 +1,7 @@
+//COMP229-MIDTERM-301244428
+//HEBA SAJID 301244428
+
+
 // define the book model
 import booksModel from '../models/books.js';
 
@@ -16,7 +20,7 @@ export function displayBookList(req, res, next) {
 //  GET the Book Details page in order to add a new Book
 export function displayAddPage(req, res, next) {
 
-    res.render('index', {title: 'Add Book', page: 'books/edit', book: {} })
+    res.render('index', {title: 'Add Book', page: 'books/edit', book: {} }) //rendering the displayAddPage
     
 }
 
@@ -31,7 +35,7 @@ export function processAddPage(req, res, next) {
         price: req.body.price
     });
 
-    booksModel.create(newBook, (err, Book) => {
+    booksModel.create(newBook, (err, Book) => { //function will create a book onto the book list
         if(err){
             console.error(err);
             res.end(err);
@@ -74,7 +78,7 @@ export function processEditPage(req, res, next) {
         price: req.body.price
     });
 
-    booksModel.updateOne({_id: id }, newBook, (err, Book) => {
+    booksModel.updateOne({_id: id }, newBook, (err, Book) => { //books list will be updated with new information
         if(err){
             console.error(err);
             res.end(err);
@@ -89,7 +93,7 @@ export function processEditPage(req, res, next) {
 export function processDelete(req, res, next) {
     let id = req.params.id;
 
-    booksModel.remove({_id: id}, (err) => {
+    booksModel.remove({_id: id}, (err) => { //the book can be deleted
         if (err){
             console.error(err);
             res.end(err);
