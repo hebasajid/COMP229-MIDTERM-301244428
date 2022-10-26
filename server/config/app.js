@@ -1,6 +1,7 @@
 import createError from 'http-errors';
 import express from 'express';
 
+
 // Fix for __dirname using ESM
 import path,{dirname} from 'path';
 import {fileURLToPath} from 'url';
@@ -62,5 +63,6 @@ app.use((err, req, res, next) => {
     res.status(err.status || 500);
     res.render('error');
 });
+
 
 export default app;

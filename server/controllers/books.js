@@ -4,7 +4,7 @@ import booksModel from '../models/books.js';
 /* GET books List page. READ */
 export function displayBookList(req, res, next) {
     // find all books in the books collection
-    booksModel.find((err, booksCollection) => {
+    booksModel.find(function(err, booksCollection) {
         if (err) {
             console.error(err);
             res.end(err);
@@ -80,7 +80,7 @@ export function processEditPage(req, res, next) {
             res.end(err);
         };
 
-        res.redirect('/books/list');
+        res.redirect('/books/list')
     } )
     
 }
@@ -95,7 +95,7 @@ export function processDelete(req, res, next) {
             res.end(err);
         }
 
-        res.redirect('/books/list');
+        res.redirect('/books/list')
     })
    
 }
